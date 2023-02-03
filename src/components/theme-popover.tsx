@@ -1,8 +1,9 @@
+import * as Popover from '@radix-ui/react-popover';
 import clsx from 'clsx';
 import { MoreVertical } from 'lucide-react';
-import * as Popover from '@radix-ui/react-popover';
-import Tooltip from '@/components/tooltip';
+
 import ThemeToggle from '@/components/theme-toggle';
+import Tooltip from '@/components/tooltip';
 
 const ThemePopover = () => {
   return (

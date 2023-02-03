@@ -1,9 +1,11 @@
-import type { AppProps } from 'next/app';
-import { Inter } from '@next/font/google';
-import { ThemeProvider } from 'next-themes';
-import { TooltipProvider } from '@radix-ui/react-tooltip';
-import Layout from '@/components/layout';
 import '@/styles/globals.css';
+
+import { Inter } from '@next/font/google';
+import { TooltipProvider } from '@radix-ui/react-tooltip';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
+
+import Layout from '@/components/layout';
 
 const inter = Inter({
   subsets: ['latin'],

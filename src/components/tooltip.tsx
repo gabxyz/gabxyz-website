@@ -1,6 +1,6 @@
-import * as React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import clsx from 'clsx';
+import * as React from 'react';
 
 interface TooltipProps {
   children: React.ReactNode;

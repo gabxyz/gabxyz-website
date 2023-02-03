@@ -1,8 +1,9 @@
-import Link from 'next/link';
 import clsx from 'clsx';
 import { Github, Twitter } from 'lucide-react';
-import Tooltip from '@/components/tooltip';
+import Link from 'next/link';
+
 import ThemePopover from '@/components/theme-popover';
+import Tooltip from '@/components/tooltip';
 
 const Header = () => {
   return (

@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import type { ReactElement } from 'react';
-import clsx from 'clsx';
-import { useTheme } from 'next-themes';
-import { Sun, Moon, Monitor } from 'lucide-react';
 import * as ToggleGroup from '@radix-ui/react-toggle-group';
+import clsx from 'clsx';
+import { Monitor, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import type { ReactElement } from 'react';
+import { useEffect, useState } from 'react';
+
 import Tooltip from '@/components/tooltip';
 
 const ThemeToggle = () => {
