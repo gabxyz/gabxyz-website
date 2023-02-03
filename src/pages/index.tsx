@@ -1,15 +1,27 @@
-import Head from 'next/head';
-
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>gabxyz</title>
-        <meta name='description' content='personal website' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.png' />
-      </Head>
-      <h1>gabxyz</h1>
+      <section className='max-w-3xl text-gray-11'>
+        <h2>Gabriel Rodrigues</h2>
+        <p>
+          I'm a developer living in Brazil, currently learning and exploring web
+          development and UI/UX.
+        </p>
+        <p>
+          After spending some time learning and getting familiar with the basics
+          of modern web development, I decided to build this website to showcase
+          what I've been building on my own, share some of my toughts, and, of
+          course, use it as my personal playground to learn new stuff.
+        </p>
+        <p>
+          I'm interested and inspired by well-crafted, polished user interfaces
+          that provide great experiences through detail and interaction. Things
+          I build are based on what inspires me.
+        </p>
+      </section>
+      <section className='max-w-3xl text-gray-11 '>
+        <h2>Projects</h2>
+      </section>
     </>
   );
 }
