@@ -1,4 +1,14 @@
-export default function Home() {
+import { allPosts, type Post } from 'contentlayer/generated';
+import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+
+export const getStaticProps: GetStaticProps<{
+  posts: Post[];
+}> = () => {
+  return { props: { posts: allPosts } };
+};
+
+const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <section className='max-w-3xl text-gray-11'>
@@ -21,7 +31,14 @@ export default function Home() {
       </section>
       <section className='max-w-3xl text-gray-11 '>
         <h2>Projects</h2>
+        {posts.map((post) => (
+          <Link key={post.slug} href={`/writing/${post.slug}`}>
+            {post.title}
+          </Link>
+        ))}
       </section>
     </>
   );
-}
+};
+
+export default Home;
