@@ -12,8 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>
         {`
-          html {
-            font-family: ${inter.style.fontFamily};
+          :root {
+            --font-inter: ${inter.style.fontFamily};
           }
         `}
       </style>
