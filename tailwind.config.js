@@ -9,13 +9,20 @@ module.exports = {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
       },
       fontWeight: {
-        light: 325,
-        normal: 425,
-        medium: 525,
-        semibold: 625,
-        bold: 725,
+        light: 350,
+        normal: 450,
+        medium: 550,
+        semibold: 650,
+        bold: 750,
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('windy-radix-typography'),
+    require('windy-radix-palette'),
+    require('tailwindcss-radix')({
+      variantPrefix: 'rdx',
+    }),
+  ],
 };

@@ -4,6 +4,15 @@
 
 @layer base {
   html {
-    @apply scroll-smooth antialiased font-normal;
+    @apply scroll-smooth font-normal antialiased;
+
+    /* PWA enhancements */
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  body {
+    @apply bg-gray-2 text-gray-12 selection:bg-sky-4;
   }
 }
