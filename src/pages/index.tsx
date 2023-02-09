@@ -1,6 +1,8 @@
-import { allPosts, type Post } from 'contentlayer/generated';
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
-import Link from 'next/link';
+import { allPosts, type Post } from "contentlayer/generated";
+import { type GetStaticProps, type InferGetStaticPropsType } from "next";
+
+import ProjectCard from "@/components/project-card";
+import { projects } from "@/content/projects";
 
 export const getStaticProps: GetStaticProps<{
   posts: Post[];
@@ -11,7 +13,7 @@ export const getStaticProps: GetStaticProps<{
 const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <section className='max-w-3xl text-gray-11'>
+      <section className="max-w-3xl">
         <h2>Gabriel Rodrigues</h2>
         <p>
           I'm a developer living in Brazil, currently learning and exploring web
@@ -29,13 +31,18 @@ const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
           I build are based on what inspires me.
         </p>
       </section>
-      <section className='max-w-3xl text-gray-11 '>
+      <section className="max-w-3xl">
         <h2>Projects</h2>
-        {posts.map((post) => (
+        <div className="divide-y divide-gray-6 ">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+        {/* {posts.map((post) => (
           <Link key={post.slug} href={`/writing/${post.slug}`}>
             {post.title}
           </Link>
-        ))}
+        ))} */}
       </section>
     </>
   );
