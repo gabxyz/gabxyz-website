@@ -2,8 +2,9 @@ import clsx from "clsx";
 import { Github, Twitter } from "lucide-react";
 import Link from "next/link";
 
-import ThemePopover from "@/components/theme-popover";
 import Tooltip from "@/components/tooltip";
+
+import ThemeSelect from "./theme-select";
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
         >
           gabxyz
         </Link>
-        <div className="flex items-center gap-3.5">
+        <div className="flex items-center gap-3">
           <Tooltip content="twitter">
             <a
               className={clsx(
@@ -50,7 +51,7 @@ const Header = () => {
               <Github size={18} />
             </a>
           </Tooltip>
-          <ThemePopover />
+          <ThemeSelect />
         </div>
       </div>
     </header>

@@ -24,7 +24,11 @@ const ProjectCard = ({
           target="_blank"
           rel="noopener noreferrer"
           href={liveUrl}
-          className="group gap-1 font-medium inline-flex items-center underline decoration-gray-11 decoration-from-font underline-offset-4 motion-safe:duration-200 motion-safe:ease-productive-standard hover:opacity-80"
+          className={clsx(
+            "group inline-flex items-center gap-1 font-medium",
+            "underline decoration-gray-11 decoration-from-font underline-offset-4",
+            "hover:opacity-80 motion-safe:duration-200 motion-safe:ease-productive-standard"
+          )}
         >
           {title}
           <ArrowUpRight
@@ -35,13 +39,17 @@ const ProjectCard = ({
 
         <p className="text-gray-11">{overview}</p>
         <div className="mt-4 flex items-center justify-between">
-          <p className="text-gray-11 text-sm">{stack.join(" - ")}</p>
+          <p className="text-sm text-gray-11">{stack.join(" - ")}</p>
           <a
             aria-label={`go to ${title} repository`}
             target="_blank"
             rel="noopener noreferrer"
             href={repoUrl}
-            className="group gap-1 text-sm inline-flex items-center underline decoration-dotted decoration-gray-11 decoration-from-font underline-offset-4 motion-safe:duration-200 motion-safe:ease-productive-standard hover:opacity-80"
+            className={clsx(
+              "group inline-flex items-center gap-1 text-sm",
+              "underline decoration-gray-11 decoration-dotted decoration-from-font underline-offset-4",
+              "hover:opacity-80 motion-safe:duration-200 motion-safe:ease-productive-standard"
+            )}
           >
             code
             <ArrowRight
