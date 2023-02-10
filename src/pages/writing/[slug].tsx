@@ -1,10 +1,10 @@
-import { allPosts, type Post } from 'contentlayer/generated';
+import { allPosts, type Post } from "contentlayer/generated";
 import type {
   GetStaticPaths,
   GetStaticProps,
   InferGetStaticPropsType,
-} from 'next';
-import { useMDXComponent } from 'next-contentlayer/hooks';
+} from "next";
+import { useMDXComponent } from "next-contentlayer/hooks";
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = allPosts.map((post) => ({ params: { slug: post.slug } }));
